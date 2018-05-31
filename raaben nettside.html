@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LOREMIPSUMISTHEBEST</title>
+    <style>
+
+        html, body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .videoContainer {
+            position: relative;
+            width: 100%;
+            height: 1309px;
+            background-attachment: scroll;
+            overflow: hidden;
+        }
+        .videoContainer video {
+            min-width: 100%;
+            min-height: 1309px;
+            position: relative;
+            z-index: 1;
+        }
+        .videoContainer .overlay {
+            height: 1309px;
+            width: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+            background: black;
+            opacity: 0.6;
+        }
+        .blackleft {
+            background-color: black;
+            width: 50%;
+            height: 100%;
+            color: white;
+            position: absolute;
+            -webkit-animation-name: leftanime;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-fill-mode: forwards;
+            animation-name: leftanime;
+            animation-duration: 2s;
+            z-index: 10;
+            animation-iteration-count: revert;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            margin-top: -51%;
+        }
+
+        .blackright {
+            background-color: black;
+            width: 50%;
+            height: 100%;
+            color: white;
+            position: absolute;
+            right: 0;
+            -webkit-animation-name: rightanime;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-fill-mode: forwards;
+            animation-name: rightanime;
+            animation-duration: 2s;
+            z-index: 10;
+            animation-iteration-count: initial;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            margin-top: -51%;
+        }
+
+
+        @-webkit-keyframes leftanime {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -50%;
+            }
+        }
+
+        @keyframes leftanime {
+            0% {
+                left: 0;
+            }
+
+            100% {
+                left: -50%;
+            }
+        }
+
+
+        @-webkit-keyframes rightanime {
+            0% {
+                right: 0;
+            }
+
+            100% {
+                right: -100%;
+            }
+        }
+
+        @keyframes rightanime {
+            0% {
+                right: 0;
+            }
+
+            100% {
+                right: -50%;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="videoContainer">
+    <div class="overlay"></div>
+    <video id="myVideo" autoplay loop>
+        <source src="../img2/Ali-A%20intro%20ear%20rape%20%5BMpgun.com%5D.mp4" type="video/mp4">
+    </video>
+</div>
+
+
+<div class="blackleft"></div>
+<div class="blackright"></div>
+
+
+</body>
+</html>
